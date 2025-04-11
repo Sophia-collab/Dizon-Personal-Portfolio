@@ -1,0 +1,195 @@
+		* {
+			margin: 0;
+			padding: 0;
+			}
+
+/* Body */ 	
+		body {
+			background-color: #dccc9c;
+			font-family: sans-serif;
+		}
+		
+/* Header */ 
+		header {
+			display: flex;
+			justify-content: space-between;
+			background-color: #e4d4ac;
+			padding: 10px;
+			padding-right: 90px;
+		}
+		
+ /* Navigation style */		
+		nav {
+			position: relative;
+			display: flex;
+			margin-top: 4px;
+			margin-right: 70px;
+			padding-left: 35px;
+			padding-right: 35px;
+			width: 524px;
+			height: 50px;
+			border-radius: 8px;
+			justify-content: center;
+			align-items: center;
+		}		
+
+		nav a {
+			position: relative;
+			display: inline-block;
+			font-weight: bold;
+			color: black;
+			text-decoration: none;
+			font-size: 20px;
+			padding: 0 40px;
+			z-index: 1;
+		}
+
+		nav a.active {
+   			color: red;
+		}
+
+		nav a:hover {
+			color: red;
+    		transition: all 0.3s ease;
+		}
+
+		nav:hover a.active:not(:hover) {
+			color: black;
+		}
+
+		nav span {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 130px;
+			height: 100%;
+			background: linear-gradient(45deg, #ffdead, #fcd46c);
+			border-radius: 10px;
+			transition: .5s;
+		}
+
+		nav a:nth-child(1):hover~span {
+			left: 0;
+		}
+
+		nav a:nth-child(2):hover~span {
+			left: 135px;
+		}
+
+		nav a:nth-child(3):hover~span {
+			left: 283px;
+		}
+
+		nav a:nth-child(4):hover~span {
+			left: 448px;
+		}
+
+/* Logo */
+		.logo {
+			margin: 5px;
+			margin-left: 30px;
+		}	
+
+		.inline {
+			display: flex;
+			justify-content: flex-start;
+		}
+
+		.info h2 {
+			font-family: 'Helvetica', Times, serif;
+			font-size: 30px;
+			padding-bottom: 6px;	
+		}
+
+		.inline p {
+			text-align: justify;
+		}
+
+/* Contacts */ 
+		.contact {
+			position: relative;
+			display: inline-block;
+			background-color: black;
+			color: white;
+			text-decoration: none;
+			margin-top: 10px;
+			font-size: 20px;
+			padding: 10px 40px; 
+  			border-radius: 25px;
+			cursor: pointer;
+			transition: transform 0.5s ease, background-color 0.5s ease;
+		}
+
+		.contact:hover {
+			background: linear-gradient(45deg, #ffdead, #fcd46c);
+			color: red;
+			font-weight: bold;
+			transform: scale(1.2);
+		}
+
+		.info {
+			padding: 120px;
+			margin-left: 80px;
+			margin-top: 40px;
+		}
+
+		.hello {
+			font-family: 'Times New Roman', Times, serif;
+			padding-bottom: 6px;
+			font-size: 50px;
+		}
+
+		h1 {
+			font-family: serif;
+			font-size: 80px;
+		}
+
+/* Images */
+		.container {
+			display: flex;
+			position: relative;
+			align-items: center; 
+			padding-right: 0px;
+			padding-left: 100px;
+		}
+
+		.square {
+			position: absolute;
+			top: 90px;
+			right: 190px;
+			width: 380px;      
+    		height: 470px;  
+    		background-color: #e4d4ac;
+			border-radius: 20px;
+			z-index: 1;	
+			box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+		}
+
+		.profile {
+			margin: 40px;
+			margin-right: 150px;
+			border-radius: 20px;  
+    		z-index: 2;  
+			width: 300px;       
+			height: auto;
+			box-shadow: 0 0 20px rgba(255, 200, 100, 0.6);
+		}
+
+/* Intro Animation */
+		@keyframes combined {
+		0% {
+			opacity: 0;
+			transform: translateY(30px);
+		}
+		50% {
+			opacity: 0.5;
+		}
+		100% {
+			opacity: 1;
+			transform: translateY(0);
+		}
+		}
+
+		.animated-intro {
+			animation: combined 1.5s ease-in;
+		}
